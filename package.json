@@ -1,0 +1,23 @@
+{
+  "name": "postcss-boost-specificity",
+  "version": "0.1.0",
+  "description": "The PostCSS plugin to increase(boost) CSS selectors specificity",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "postcss",
+    "plugin",
+    "increase",
+    "enhance",
+    "amplify",
+    "boost",
+    "CSS",
+    "selector",
+    "selectors",
+    "specificity"
+  ],
+  "author": "Stanislav Dolgachov",
+  "license": "MIT"
+}
