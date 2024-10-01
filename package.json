@@ -4,7 +4,8 @@
   "description": "The PostCSS plugin to increase(boost) CSS selectors specificity",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "unit": "node --test index.test.js",
+    "test": "npm run unit && eslint ."
   },
   "keywords": [
     "postcss",
@@ -18,6 +19,27 @@
     "selectors",
     "specificity"
   ],
-  "author": "Stanislav Dolgachov",
-  "license": "MIT"
+  "author": "Stanislav Dolgachov <s.dolgachov@gmail.com>",
+  "repository": "https://github.com/ukrcode/postcss-boost-specificity",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.27"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "postcss": "^8.4.27"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": ["eslint:recommended"]
+  }
 }
