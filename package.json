@@ -2,12 +2,13 @@
   "name": "postcss-boost-specificity",
   "version": "0.1.0",
   "description": "The PostCSS plugin to increase(boost) CSS selectors specificity",
-  "main": "index.js",
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lint:fix": "eslint --fix ."
   },
+  "main": "lib/boost-specificity.js",
+  "types": "lib/boost-specificity.d.ts",
   "keywords": [
     "postcss",
     "plugin",
@@ -31,8 +32,8 @@
   },
   "devDependencies": {
     "eslint": "^8.47.0",
-    "postcss": "^8.4.27",
-    "vitest": "^2.1.1"
+    "jest": "^29.7.0",
+    "postcss": "^8.4.27"
   },
   "eslintConfig": {
     "parserOptions": {
