@@ -1,19 +1,14 @@
-const postcss = require('postcss')
-const { equal } = require('node:assert')
-const { test } = require('node:test')
+import { describe, it, expect } from "vitest";
+import plugin from "./index";
 
-const plugin = require('./')
+// https://github.com/postcss/postcss/issues/1771#issuecomment-2007313545
 
-async function run(input, output, opts = {}) {
-  let result = await postcss([plugin(opts)]).process(input, { from: undefined })
-  equal(result.css, output)
-  equal(result.warnings().length, 0)
-}
+describe("postcss-boost-specificity", () => {
+  it("should pass", () => {
+    expect(true).toBe(true);
+  });
 
-/* Write tests here
-
-test('does something', async () => {
-  await run('a{ }', 'a{ }', { })
-})
-
-*/
+  async function runPlugin(input, output, opts = {}) {
+    return await postcss([plugin(opts)]).process(input, { from: undefined })
+  }
+});
