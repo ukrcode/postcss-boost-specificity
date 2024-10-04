@@ -88,7 +88,7 @@ describe("postcss-boost-specificity", () => {
   });
 
   describe("root level selector", () => {
-    it('should work `html` selector', async () => {
+    it("should work `html` selector", async () => {
       const cssCode = `
         html {
           background-color: #bada55;
@@ -106,7 +106,7 @@ describe("postcss-boost-specificity", () => {
       expect(result).toBe(minifyCss(expectedResult));
     });
 
-    it('should work `:not(#\\9)` selector', async () => {
+    it("should work `:not(#\\9)` selector", async () => {
       const cssCode = `
         :not(#\\9) {
           background-color: #bada55;
@@ -124,7 +124,7 @@ describe("postcss-boost-specificity", () => {
       expect(result).toBe(minifyCss(expectedResult));
     });
 
-    it('should work `:host` selector', async () => {
+    it("should work `:host` selector", async () => {
       const cssCode = `
         :host {
           background-color: #bada55;
@@ -142,7 +142,7 @@ describe("postcss-boost-specificity", () => {
       expect(result).toBe(minifyCss(expectedResult));
     });
 
-    it('should work `:root` selector', async () => {
+    it("should work `:root` selector", async () => {
       const cssCode = `
         :root {
           background-color: #bada55;
@@ -159,5 +159,23 @@ describe("postcss-boost-specificity", () => {
 
       expect(result).toBe(minifyCss(expectedResult));
     });
+  });
+
+  it("should work with `::selection`", async () => {
+    const cssCode = `
+        ::selection {
+          background-color: #bada55;
+        }
+      `;
+
+    const expectedResult = `
+        ${defaultFullBoosterString} ::selection {
+          background-color: #bada55;
+        }
+      `;
+
+    const result = await runPostcssPlugin(plugin, cssCode);
+
+    expect(result).toBe(minifyCss(expectedResult));
   });
 });
