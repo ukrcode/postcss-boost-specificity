@@ -1,10 +1,14 @@
 "use strict";
 
 const plugin = require("../lib/boost-specificity");
-const { defaultFullBoosterString } = require("../lib/constants");
+const {
+  singleBoosterString,
+} = require("../lib/constants");
 
 const { minifyCss } = require("./minify-css");
 const { runPostcssPlugin } = require("./run-postcss-plugin");
+
+const defaultFullBoosterString = singleBoosterString.repeat(3);
 
 describe("postcss-boost-specificity", () => {
   it("should work with single class `.batman`", async () => {
@@ -156,6 +160,193 @@ describe("postcss-boost-specificity", () => {
       `;
 
       const result = await runPostcssPlugin(plugin, cssCode);
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+  });
+
+  describe("options", () => {
+    it("should respect `repeatTimes` option for regular selector", async () => {
+      const cssCode = `
+        .batman {
+            background: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+          ${singleBoosterString}${singleBoosterString} .batman {
+              background: #bada55;
+          }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        repeatTimes: 2,
+      });
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+
+    it("should respect `repeatTimes` option for root(`html`) selector", async () => {
+      const cssCode = `
+        html {
+          background-color: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+        html${singleBoosterString}${singleBoosterString} {
+          background-color: #bada55;
+        }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        repeatTimes: 2,
+      });
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+
+    it("should use `booster` string from options", async () => {
+      const booster = ".my-cool-class-wrapper";
+      const cssCode = `
+        .batman {
+            background: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+          .my-cool-class-wrapper.my-cool-class-wrapper.my-cool-class-wrapper  .batman {
+              background: #bada55;
+          }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        booster,
+      });
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+
+    it("should NOT use an empty string for `booster` from options", async () => {
+      const booster = "    ";
+      const cssCode = `
+        .batman {
+            background: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+          ${singleBoosterString}${singleBoosterString}${singleBoosterString} .batman {
+              background: #bada55;
+          }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        booster,
+      });
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+
+    it("should combine `booster` and `repeatTimes` from options", async () => {
+      const booster = ".my-cool-class-wrapper";
+      const cssCode = `
+        .batman {
+            background: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+          .my-cool-class-wrapper .batman {
+              background: #bada55;
+          }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        booster,
+        repeatTimes: 1,
+      });
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+
+    it("should ignore `booster` and `repeatTimes` from options if wrong data types", async () => {
+      const cssCode = `
+        .batman {
+              background: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+        ${defaultFullBoosterString} .batman {
+            background: #bada55;
+        }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        booster: [],
+        repeatTimes: {},
+      });
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+
+    it("should ignore NaN as `repeatTimes`", async () => {
+      const cssCode = `
+        .batman {
+              background: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+        ${defaultFullBoosterString} .batman {
+            background: #bada55;
+        }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        repeatTimes: NaN,
+      });
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+
+    it("should ignore Infinity as `repeatTimes`", async () => {
+      const cssCode = `
+        .batman {
+              background: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+        ${defaultFullBoosterString} .batman {
+            background: #bada55;
+        }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        repeatTimes: Infinity,
+      });
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
+
+    it("should ignore -Infinity as `repeatTimes`", async () => {
+      const cssCode = `
+        .batman {
+              background: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+        ${defaultFullBoosterString} .batman {
+            background: #bada55;
+        }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode, {
+        repeatTimes: -Infinity,
+      });
 
       expect(result).toBe(minifyCss(expectedResult));
     });

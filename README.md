@@ -4,7 +4,7 @@
 
 Documentation in [🇺🇦 ukrainean](./README_uk.md)
 
-[PostCSS](https://github.com/postcss/postcss) plugin to boost(increase) the specicity of your selectors.
+[PostCSS](https://github.com/postcss/postcss) plugin to boost(increase) the specificity of your selectors.
 
 It is hugely inspired by [MadLittleMods/postcss-increase-specificity](https://github.com/MadLittleMods/postcss-increase-specificity) but it is not a copy, it has different API and the code is written from scratch.
 
@@ -67,9 +67,21 @@ html:not(#\9):not(#\9):not(#\9) {
 - `booster`: a string, CSS selector to prepend(append for root selector like `html, :root, :host`) to each of your selectors.
   - the default value is: `:not(#\9)`. It increases specificity by `id` for each repeated time.
   - to use the default `booster` you don't have to update your `HTML`.
-  - _Warning: The default `:not(#\9)` pseudo-class selector is not supported in `IE` browsers. If it is an issue for you, please provide the substitute.
-- `repeat`: a number, it says how many times to repeat `options.booster` for your selectors
+  - _Warning_: The default value is `:not(#\9)` pseudo-class selector is not supported in `IE` browsers. If it is an issue for you, please provide the substitute.
+  - An empty string of string only from spaces are ignored, the default value is used instead;
+    ```js
+    let badBooster1 = "";
+    let badBooster2 = "     "; // These values are ignored
+    ```
+- `repeatTimes`: a number, it says how many times to repeat `options.booster` for your selectors
   - the default value is: `3`
+  - `NaN`, `Infinity`, `-Infinity` values are ignored, the default value is used instead;
+    ```js
+    let badRepeatTimes1 = NaN;
+    let badRepeatTimes2 = Infinity;
+    let badRepeatTimes3 = -Infinity;
+    // These values are ignored
+    ```
 
 ## Scripts
 
