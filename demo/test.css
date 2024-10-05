@@ -1,0 +1,36 @@
+.batman {
+  background: #bada55;
+}
+
+.batman,
+.robin {
+  color: red;
+}
+
+[id="joker"] {
+  background-color: #bada55;
+}
+
+[id^="bane"] {
+  background-color: #bada55;
+}
+
+html {
+  background-color: #bada55;
+}
+
+:not(#\\9) {
+  background-color: #bada55;
+}
+
+:host {
+  background-color: #bada55;
+}
+
+:root {
+  background-color: #bada55;
+}
+
+::selection {
+  background-color: #bada55;
+}

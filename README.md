@@ -62,6 +62,15 @@ html:not(#\9):not(#\9):not(#\9) {
 
 - By default it uses `:not(#\9)` selector and adds it your selector. But you can provide your own substitute. Here you can find all the discussion related to it [What is the most character-efficient way to increase CSS specificity?](https://stackoverflow.com/questions/19399625/what-is-the-most-character-efficient-way-to-increase-css-specificity)
 
+
+## Demo
+
+We prepared a Demo you can run locally. Just don't forget running `npm install` beforehand.
+
+- All the code for it is inside `demo/index.js` folder. 
+- It takes CSS code from `demo/test.css` file, process it and puts results to the `demo/results/test.result.css` file.
+- `npm run demo` script runs this demo
+
 ## Options
 
 - `booster`: a string, CSS selector to prepend(append for root selector like `html, :root, :host`) to each of your selectors.
@@ -87,6 +96,7 @@ html:not(#\9):not(#\9):not(#\9) {
 
 - `npm test`: single tests run
 - `npm run test:watch`: test run in a "watch" mode
+- `npm run demo`: demo run
 
 ## Contribution
 

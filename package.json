@@ -4,6 +4,7 @@
   "description": "The PostCSS plugin to increase(boost) CSS selectors specificity",
   "scripts": {
     "test": "jest",
+    "demo": "node ./demo",
     "test:watch": "jest --watch",
     "lint:fix": "eslint --fix ."
   },
@@ -31,6 +32,7 @@
     "postcss": "^8.4.27"
   },
   "devDependencies": {
+    "chalk": "^5.3.0",
     "clean-css": "^5.3.3",
     "eslint": "^8.47.0",
     "jest": "^29.7.0",
