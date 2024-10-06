@@ -163,6 +163,25 @@ describe("postcss-boost-specificity", () => {
 
       expect(result).toBe(minifyCss(expectedResult));
     });
+
+    it.only("should work with complext html selector", async () => {
+      // html[data-whatintent=keyboard] .button:focus {}
+      const cssCode = `
+        html[data-whatintent=keyboard] .button:focus {
+          background-color: #bada55;
+        }
+      `;
+
+      const expectedResult = `
+        html[data-whatintent=keyboard]${defaultFullBoosterString} .button:focus {
+          background-color: #bada55;
+        }
+      `;
+
+      const result = await runPostcssPlugin(plugin, cssCode);
+
+      expect(result).toBe(minifyCss(expectedResult));
+    });
   });
 
   describe("options", () => {

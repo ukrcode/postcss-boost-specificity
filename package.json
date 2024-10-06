@@ -49,5 +49,8 @@
     "extends": [
       "eslint:recommended"
     ]
+  },
+  "dependencies": {
+    "css-selector-parser": "^3.0.5"
   }
 }
