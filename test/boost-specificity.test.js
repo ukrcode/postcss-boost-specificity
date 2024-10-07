@@ -1,9 +1,7 @@
 "use strict";
 
 const plugin = require("../lib/boost-specificity");
-const {
-  singleBoosterString,
-} = require("../lib/constants");
+const { singleBoosterString } = require("../lib/constants");
 
 const { minifyCss } = require("./minify-css");
 const { runPostcssPlugin } = require("./run-postcss-plugin");
@@ -164,8 +162,7 @@ describe("postcss-boost-specificity", () => {
       expect(result).toBe(minifyCss(expectedResult));
     });
 
-    it.only("should work with complext html selector", async () => {
-      // html[data-whatintent=keyboard] .button:focus {}
+    it("should work with complex 'html' selector", async () => {
       const cssCode = `
         html[data-whatintent=keyboard] .button:focus {
           background-color: #bada55;
@@ -173,7 +170,7 @@ describe("postcss-boost-specificity", () => {
       `;
 
       const expectedResult = `
-        html[data-whatintent=keyboard]${defaultFullBoosterString} .button:focus {
+        html[data-whatintent=keyboard] .button:focus${defaultFullBoosterString} {
           background-color: #bada55;
         }
       `;
