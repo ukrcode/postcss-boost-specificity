@@ -18,7 +18,7 @@ npm install -D postcss-boost-specificity
 
 ## How does it work?
 
-Basically it add additional selector to each of yours selectors to improve their weight.
+Basically it adds additional selector to each of your selectors to improve their weight.
 
 **Initial CSS:**
 
@@ -60,24 +60,23 @@ html:not(#\9):not(#\9):not(#\9) {
 }
 ```
 
-- By default it uses `:not(#\9)` selector and adds it your selector. But you can provide your own substitute. Here you can find all the discussion related to it [What is the most character-efficient way to increase CSS specificity?](https://stackoverflow.com/questions/19399625/what-is-the-most-character-efficient-way-to-increase-css-specificity)
-
+- By default it uses `:not(#\9)` selector and adds it to your selector. But you can provide your own substitute. Here you can find all the discussion related to it [What is the most character-efficient way to increase CSS specificity?](https://stackoverflow.com/questions/19399625/what-is-the-most-character-efficient-way-to-increase-css-specificity)
 
 ## Demo
 
 We prepared a Demo you can run locally. Just don't forget running `npm install` beforehand.
 
-- All the code for it is inside `demo/index.js` folder. 
+- All the code for it is inside `demo/index.js` file.
 - It takes CSS code from `demo/test.css` file, process it and puts results to the `demo/results/test.result.css` file.
 - `npm run demo` script runs this demo
+- `demo/results/test.result.css` is in `.gitignore`, so you can generate it by yourself.
 
 ## Options
 
-- `booster`: a string, CSS selector to prepend(append for root selector like `html, :root, :host`) to each of your selectors.
+- `booster`: a string, CSS selector to `prepend` (`append` for root selectors like `html, :root, :host`) to each of your selectors.
   - the default value is: `:not(#\9)`. It increases specificity by `id` for each repeated time.
-  - to use the default `booster` you don't have to update your `HTML`.
-  - _Warning_: The default value is `:not(#\9)` pseudo-class selector is not supported in `IE` browsers. If it is an issue for you, please provide the substitute.
-  - An empty string of string only from spaces are ignored, the default value is used instead;
+    - _Warning_: The default value is `:not(#\9)` pseudo-class selector is not supported in `IE` browsers. If it is an issue for you, please provide the substitute.
+  - An empty string or a string only from spaces are ignored, the default value is used instead;
     ```js
     let badBooster1 = "";
     let badBooster2 = "     "; // These values are ignored
@@ -99,4 +98,3 @@ We prepared a Demo you can run locally. Just don't forget running `npm install` 
 - `npm run demo`: demo run
 
 ## Contribution
-

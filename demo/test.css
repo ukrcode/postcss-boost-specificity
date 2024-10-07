@@ -31,6 +31,10 @@ html {
   background-color: #bada55;
 }
 
+html[data-whatintent=keyboard] .button:focus {
+  background-color: #bada55;
+}
+
 ::selection {
   background-color: #bada55;
 }
