@@ -1,7 +1,7 @@
 ## ToDo before release
 
-- [ ] Add `GitHub` action for test run
-- [ ] Emphasize `GitHub` action in README on in Repo
+- [x] Add `GitHub` action for test run
+- [x] Emphasize `GitHub` action in README on in Repo
 - [ ] Add `changeset` ???
 - [ ] `UK` translation
 - [ ] Add contribution details (`CONTRIBUTION.MD` file)
