@@ -1,6 +1,8 @@
 # postcss-boost-specificity
 
-![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main): [CI runs log fot "main" branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml?query=branch%3Amain)
+![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main)
+
+[CI runs log for "main" branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml?query=branch%3Amain)
 
 Documentation in [🇺🇦 ukrainean](./README_uk.md)
 
