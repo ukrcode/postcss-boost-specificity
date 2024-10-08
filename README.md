@@ -1,6 +1,6 @@
 # postcss-boost-specificity
 
-## [Changelog](https://github.com/MadLittleMods/postcss-increase-specificity/blob/master/CHANGELOG.md)
+## [Changelog](./CHANGELOG.md)
 
 Documentation in [🇺🇦 ukrainean](./README_uk.md)
 
