@@ -1,6 +1,6 @@
 # postcss-boost-specificity
 
-## [Changelog](./CHANGELOG.md)
+![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main)
 
 Documentation in [🇺🇦 ukrainean](./README_uk.md)
 
@@ -9,6 +9,8 @@ Documentation in [🇺🇦 ukrainean](./README_uk.md)
 It is hugely inspired by [MadLittleMods/postcss-increase-specificity](https://github.com/MadLittleMods/postcss-increase-specificity) but it is not a copy, it has different API and the code is written from scratch.
 
 The reason I created it was, that initial plugin is not supported by the author and uses outdated dependencies.
+
+## [Changelog](./CHANGELOG.md)
 
 ## Install
 
