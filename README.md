@@ -6,7 +6,7 @@
 
 Documentation in [🇺🇦 ukrainean](./README_uk.md)
 
-[PostCSS](https://github.com/postcss/postcss) plugin to boost(increase) the specificity of your selectors.
+[PostCSS](https://github.com/postcss/postcss) plugin to boost (increase) the specificity of CSS selectors.
 
 It is hugely inspired by [MadLittleMods/postcss-increase-specificity](https://github.com/MadLittleMods/postcss-increase-specificity) but it is not a copy, it has different API and the code is written from scratch.
 
