@@ -43,7 +43,9 @@ async function readTextFile(filePath) {
 
   try {
     fileString = await readFile(filePath, { encoding: "utf8" });
-  } catch {}
+  } catch(error) {
+    console.error(error);
+  }
 
   return fileString;
 }

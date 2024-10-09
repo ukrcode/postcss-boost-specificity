@@ -2,10 +2,12 @@
 
 - [x] Add `GitHub` action for test run
 - [x] Emphasize `GitHub` action in README on in Repo
-- [ ] Add `changeset` ???
+- [x] Add `changeset` ???
+- [x] Add contribution details (`CONTRIBUTION.MD` file)
 - [ ] `UK` translation
-- [ ] Add contribution details (`CONTRIBUTION.MD` file)
-- [ ] Add `issue` template
+- [ ] Publish beta version
+- [ ] Address the second issue in the initial plugin
+- [ ] Use in the project
 
 ## After release
 

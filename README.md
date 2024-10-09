@@ -1,10 +1,12 @@
-#  🇺🇦 postcss-boost-specificity 
+# 🇺🇦 postcss-boost-specificity
+
+The version in [🇺🇦 ukrainean](./docs/README_uk.md)
 
 ![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main)
 
-[CI runs log for "main" branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml?query=branch%3Amain)
+[CI runs log for the "main" branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml?query=branch%3Amain)
 
-Documentation in [🇺🇦 ukrainean](./README_uk.md)
+## Description
 
 [PostCSS](https://github.com/postcss/postcss) plugin to boost (increase) the specificity of CSS selectors.
 
@@ -12,17 +14,17 @@ It is hugely inspired by [MadLittleMods/postcss-increase-specificity](https://gi
 
 The reason I created it was, that initial plugin is not supported by the author and uses outdated dependencies.
 
-## [Changelog](./CHANGELOG.md)
-
-## Install
+## Usage
 
 ```bash
 npm install -D postcss-boost-specificity
 ```
 
+After that please, add the plugin to your `postcss` configuration file or use it when you call `postcss`.
+
 ## How does it work?
 
-Basically it adds additional selector to each of your selectors to improve their weight.
+Basically it adds additional selector to each of existing selectors to improve their weight.
 
 **Initial CSS:**
 
@@ -95,10 +97,23 @@ We prepared a Demo you can run locally. Just don't forget running `npm install` 
     // These values are ignored
     ```
 
+## [Changelog](./CHANGELOG.md)
+
+
+## Contributing
+
+To be able contributing you may require to do some local setup.
+
+0. For the project under you own `GitHub` account.
+1. You must have [Node.js and NPM](https://nodejs.org/en) installed locally.
+2. Run `npm install` command in the project folder. 
+
+All other contributions details you may find in our [contributing guide](./CONTRIBUTING.md).
+
+Also, please check up out awesome `NPM scripts` bellow.
+
 ## Scripts
 
 - `npm test`: single tests run
 - `npm run test:watch`: test run in a "watch" mode
 - `npm run demo`: demo run
-
-## Contribution

@@ -6,7 +6,10 @@
     "test": "jest",
     "demo": "node ./demo",
     "test:watch": "jest --watch",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "lint": "eslint --fix .",
+    "npm:publish:beta": "npm publish --tag beta",
+    "npm:publish": "npm publish"
   },
   "main": "lib/boost-specificity.js",
   "types": "lib/boost-specificity.d.ts",
@@ -35,19 +38,24 @@
     "chalk": "^5.3.0",
     "clean-css": "^5.3.3",
     "eslint": "^8.47.0",
+    "eslint-plugin-jest": "^28.8.3",
     "jest": "^29.7.0",
     "postcss": "^8.4.27"
   },
   "eslintConfig": {
     "parserOptions": {
-      "ecmaVersion": 2017
+      "ecmaVersion": 2022
     },
     "env": {
       "node": true,
-      "es6": true
+      "es6": true,
+      "jest/globals": true
     },
     "extends": [
       "eslint:recommended"
+    ],
+    "plugins": [
+      "jest"
     ]
   },
   "dependencies": {
