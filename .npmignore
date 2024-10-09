@@ -7,3 +7,8 @@ yarn.lock
 .github
 .editorconfig
 coverage/
+
+demo/
+test/
+node_modules/
+TODO_BEFORE_RELEASE.md
