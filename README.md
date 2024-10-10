@@ -1,6 +1,6 @@
 # 🇺🇦 postcss-boost-specificity
 
-The version in [🇺🇦 ukrainean](./docs/README_uk.md)
+The version in [🇺🇦 ukrainean](./uk/README_uk.md)
 
 ![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main)
 
