@@ -130,3 +130,4 @@ dist
 .pnp.*
 
 demo/results/test.result.css
+.npmrc
