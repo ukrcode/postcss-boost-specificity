@@ -26,7 +26,10 @@
     "specificity"
   ],
   "author": "Stanislav Dolgachov <s.dolgachov@gmail.com>",
-  "repository": "github:ukrcode/postcss-boost-specificity",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ukrcode/postcss-boost-specificity.git"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0"
