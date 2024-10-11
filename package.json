@@ -8,7 +8,7 @@
     "test:watch": "jest --watch",
     "lint:fix": "eslint --fix .",
     "lint": "eslint --fix .",
-    "npm:publish:beta": "npm publish --tag beta latest"
+    "npm:publish:beta": "npm publish --tag beta"
   },
   "main": "lib/boost-specificity.js",
   "types": "lib/boost-specificity.d.ts",
