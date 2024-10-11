@@ -104,16 +104,22 @@ We prepared a Demo you can run locally. Just don't forget running `npm install` 
 
 To be able contributing you may require to do some local setup.
 
-0. For the project under you own `GitHub` account.
-1. You must have [Node.js and NPM](https://nodejs.org/en) installed locally.
-2. Run `npm install` command in the project folder. 
+### Local Setup
 
-All other contributions details you may find in our [contributing guide](./CONTRIBUTING.md).
+0. Fork the project under you own `GitHub` account.
+1. Clone the project.
+2. You must have [Node.js and NPM](https://nodejs.org/en) installed locally.
+3. Run `npm install` command in the project folder. 
 
-Also, please check up out awesome `NPM scripts` bellow.
+After the setup please follow the instructions from the [contributing guide](./CONTRIBUTING.md).
+
+Also, please check up our awesome `NPM scripts` bellow.
 
 ## Scripts
 
 - `npm test`: single tests run
+- `npm run lint`: run `ESLint` check of the code
 - `npm run test:watch`: test run in a "watch" mode
 - `npm run demo`: demo run
+- `npm run npm:publish:beta`: publish the package to NPM with the `beta` tag
+
