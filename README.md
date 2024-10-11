@@ -1,10 +1,9 @@
+![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main) ![npm version](https://badge.fury.io/js/postcss-boost-specificity.svg)
+
 # 🇺🇦 postcss-boost-specificity
 
-The version in [🇺🇦 ukrainean](./uk/README_uk.md)
-
-![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main)
-
-[CI runs log for the "main" branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml?query=branch%3Amain)
+- The version in [🇺🇦 ukrainean](./uk/README_uk.md)
+- [CI runs log for the "main" branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml?query=branch%3Amain)
 
 ## Description
 
@@ -44,6 +43,10 @@ html {
 [id="main-hero"] {
   text-transform: uppercase;
 }
+
+html[data-whatintent="keyboard"] .button:focus {
+  background-color: #bada55;
+}
 ```
 
 **Result CSS:**
@@ -63,6 +66,10 @@ html:not(#\9):not(#\9):not(#\9) {
 
 :not(#\9):not(#\9):not(#\9) [id="main-hero"] {
   text-transform: uppercase;
+}
+
+html[data-whatintent="keyboard"] .button:focus:not(#\9):not(#\9):not(#\9) {
+  background-color: #bada55;
 }
 ```
 
@@ -99,7 +106,6 @@ We prepared a Demo you can run locally. Just don't forget running `npm install` 
 
 ## [Changelog](./CHANGELOG.md)
 
-
 ## Contributing
 
 To be able contributing you may require to do some local setup.
@@ -109,7 +115,7 @@ To be able contributing you may require to do some local setup.
 0. Fork the project under you own `GitHub` account.
 1. Clone the project.
 2. You must have [Node.js and NPM](https://nodejs.org/en) installed locally.
-3. Run `npm install` command in the project folder. 
+3. Run `npm install` command in the project folder.
 
 After the setup please follow the instructions from the [contributing guide](./CONTRIBUTING.md).
 
@@ -117,9 +123,8 @@ Also, please check up our awesome `NPM scripts` bellow.
 
 ## Scripts
 
-- `npm test`: single tests run
+- `npm test`: run tests
 - `npm run lint`: run `ESLint` check of the code
-- `npm run test:watch`: test run in a "watch" mode
-- `npm run demo`: demo run
-- `npm run npm:publish:beta`: publish the package to NPM with the `beta` tag
-
+- `npm run test:watch`: run tests in a "watch" mode
+- `npm run demo`: run demo example
+- `npm run npm:publish:beta`: publish the package to NPM registry with the `beta` tag
