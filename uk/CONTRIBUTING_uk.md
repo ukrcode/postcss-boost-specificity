@@ -1,4 +1,4 @@
-# Contributing
+# 🇺🇦 Contributing
 
 Версія англійською мовою: [🇬🇧 english](../CONTRIBUTING.md)
 
