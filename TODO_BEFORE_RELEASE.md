@@ -9,10 +9,10 @@
 - [x] Address the second issue in the initial plugin
 - [x] Use in the project
 - [x] Add NPM versioning to the README
-- [ ] Publish stable version
+- [x] Publish stable version
 
 ## After release
 
 - [ ] Add to the official plugin list
-- [ ] Answer in issues for initial plugin
+- [x] Answer in issues for initial plugin
 - [ ] Create marketing list
