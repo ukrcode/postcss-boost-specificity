@@ -5,9 +5,11 @@
 - [x] Add `changeset` ???
 - [x] Add contribution details (`CONTRIBUTION.MD` file)
 - [ ] `UK` translation
-- [ ] Publish beta version
-- [ ] Address the second issue in the initial plugin
-- [ ] Use in the project
+- [x] Publish beta version
+- [x] Address the second issue in the initial plugin
+- [x] Use in the project
+- [ ] Add NPM versioning to the README
+- [ ] Publish stable version
 
 ## After release
 
