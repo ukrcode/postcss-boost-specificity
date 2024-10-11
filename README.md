@@ -87,25 +87,24 @@ We prepared a Demo you can run locally. Just don't forget to run `npm install` b
 ## Options
 
 - `booster`: a string, CSS selector to `prepend` (`append` for root selectors like `html, :root, :host`) to each of your selectors.
+
   - the default value is: `:not(#\9)`. It increases specificity by `id` for each repeated time.
     - _Warning_: The default value is `:not(#\9)` pseudo-class selector is not supported in `IE` browsers. If it is an issue for you, please provide the substitute.
   - An empty string or a string only from spaces are ignored, the default value is used instead;
-
-```js
-let badBooster1 = "";
-let badBooster2 = "     "; // These values are ignored
-```
+    ```js
+    let badBooster1 = "";
+    let badBooster2 = "     "; // These values are ignored
+    ```
 
 - `repeatTimes`: a number, that says how many times to repeat `options.booster` for your selectors
   - the default value is: `3`
   - `NaN`, `Infinity`, and `-Infinity` values are ignored, the default value is used instead;
-
-```js
-let badRepeatTimes1 = NaN;
-let badRepeatTimes2 = Infinity;
-let badRepeatTimes3 = -Infinity;
-// These values are ignored
-```
+    ```js
+    let badRepeatTimes1 = NaN;
+    let badRepeatTimes2 = Infinity;
+    let badRepeatTimes3 = -Infinity;
+    // These values are ignored
+    ```
 
 ## Contributing
 

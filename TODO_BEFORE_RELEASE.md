@@ -4,11 +4,11 @@
 - [x] Emphasize `GitHub` action in README on in Repo
 - [x] Add `changeset` ???
 - [x] Add contribution details (`CONTRIBUTION.MD` file)
-- [ ] `UK` translation
+- [x] `UK` translation
 - [x] Publish beta version
 - [x] Address the second issue in the initial plugin
 - [x] Use in the project
-- [ ] Add NPM versioning to the README
+- [x] Add NPM versioning to the README
 - [ ] Publish stable version
 
 ## After release

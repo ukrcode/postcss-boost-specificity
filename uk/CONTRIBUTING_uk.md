@@ -1,6 +1,6 @@
 # Contributing
 
-Версія англійською: [english 🇬🇧](../CONTRIBUTING.md)
+Версія англійською мовою: [🇬🇧 english](../CONTRIBUTING.md)
 
 ## Pull Requests
 
