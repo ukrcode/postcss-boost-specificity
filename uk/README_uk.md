@@ -1,4 +1,4 @@
-![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main) ![npm version](https://badge.fury.io/js/postcss-boost-specificity.svg)
+![The latest CI run for main branch](https://github.com/ukrcode/postcss-boost-specificity/actions/workflows/ci.yml/badge.svg?event=push&branch=main) ![npm version](https://img.shields.io/npm/v/postcss-boost-specificity)
 
 # 🇺🇦 postcss-boost-specificity
 
