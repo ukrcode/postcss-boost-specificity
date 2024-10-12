@@ -14,7 +14,7 @@
   "types": "lib/boost-specificity.d.ts",
   "keywords": [
     "postcss",
-    "plugin",
+    "postcss-plugin",
     "increase",
     "enhance",
     "amplify",
